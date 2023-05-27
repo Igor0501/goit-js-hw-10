@@ -1,8 +1,8 @@
 export function fetchCountries(name) {
-  const params = new URLSearchParams({
+  const response = new URLSearchParams({
     fields: 'name,flags,capital,population,languages',
   });
-  return fetch(`https://restcountries.com/v3.1/name/${name}?${params}`).then(
+  return fetch(`https://restcountries.com/v3.1/name/${name}?${response}`).then(
     countries => {
       if (!countries.ok) {
         throw new Error(countries.status);

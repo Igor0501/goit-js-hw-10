@@ -63,10 +63,6 @@ body {
     font-size: 22px;
 }
 
-.country-list img {
-    margin-right: 10px;
-}
-
 .country-info {
     display: flex;
     flex-direction: column;
@@ -116,12 +112,26 @@ h2:after {
     content: "]";
 }
 
-img {
-    box-shadow: 0 8px 30px rgb(206, 205, 205);
+ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
 }
 
-img:hover {
-    border: #ff6b08;
+img {
+    box-shadow: 0 8px 30px rgb(206, 205, 205);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.plate-wrap{
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .country-list li {
@@ -132,4 +142,38 @@ img:hover {
 .country-list li:hover {
     transform: scale(1.05);
     outline: 2px;
+}
+
+.country-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1.8rem;
+    border-color: rgba(255, 107, 10);
+    gap: 0.9rem;
+}
+
+.country-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.country-list img:hover {
+    transform: scale(1.05);
+    box-shadow: none;
+}
+
+.country-list li p {
+    margin: 0;
+    text-align: center;
+  }
+
+p{
+    margin: 0;
+    
 }
