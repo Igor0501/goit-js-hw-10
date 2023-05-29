@@ -36,17 +36,17 @@ function searchCountries(e) {
             languages: Object.values(countries[0].languages).join(', '),
           });
         } else if (countries.length > 10) {
-          Notify.info(
+          Notiflix.Notify.info(
             'Too many matches found. Please enter a more specific name.'
           );
         }
       })
       .catch((error) => {
         if (error.message === '404') {
-          Notify.failure('Oops, there is no country with that name');
+          Notiflix.Notify.failure('Oops, there is no country with that name');
         }
         else {
-           Notify.failure(error.message);
+           Notiflix.Notify.failure(error.message);
         }
       })
        
